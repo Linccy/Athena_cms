@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ifengkou.athena.dao.ShareMessageDao">
+
+    <!--某一个人的分享-->
+    <select id="getMessageByUserName" resultType="cn.ifengkou.athena.model.ShareMessage" parameterType="String">
+        SELECT * from sharemessage where username=#{name}
+    </select>
+
+    <!--某一个人的分享-->
+    <select id="getMessageAll" resultType="cn.ifengkou.athena.model.ShareMessage" parameterType="Object">
+        SELECT * from sharemessage
+    </select>
+
+    <!-- 插入记录 -->
+    <insert id="add" parameterType="Object">
+        insert into
+        sharemessage(id,username,content,address,latlng,imgs)
+        values(#{id},#{username},#{content},#{address},#{latlng},imgs)
+    </insert>
+
+    <!-- 删除记录 -->
+    <delete id="delete" parameterType="long">
+        delete from sharemessage where id=#{id}
+    </delete>
+</mapper>
