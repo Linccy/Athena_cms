@@ -138,3 +138,18 @@ create table ups
    primary key (id)
 );
 
+/*==============================================================*/
+/* Table: sharemessage                                                  */
+/*==============================================================*/
+create table sharemessage (
+   id bigint not null,
+   username varchar(100),
+   content varchar(2048),
+   address varchar(500),
+   latlng varchar(200),
+   imgs varchar(1024),
+   hasRead bool default false,
+   createAt datetime,
+primary key (id)
+);
+
