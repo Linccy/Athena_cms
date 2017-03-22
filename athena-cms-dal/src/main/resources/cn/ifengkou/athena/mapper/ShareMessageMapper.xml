@@ -18,7 +18,7 @@
     <insert id="add" parameterType="Object">
         insert into
         sharemessage(id,username,content,address,latlng,imgs)
-        values(#{id},#{username},#{content},#{address},#{latlng},imgs)
+        values(#{id},#{username},#{content},#{address},#{latlng},#{imgs})
     </insert>
 
     <!-- 删除记录 -->

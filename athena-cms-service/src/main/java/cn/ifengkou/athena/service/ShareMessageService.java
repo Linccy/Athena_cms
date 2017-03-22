@@ -1,15 +1,13 @@
-package cn.ifengkou.athena.dao;
+package cn.ifengkou.athena.service;
 
 import cn.ifengkou.athena.model.ShareMessage;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * Created by Administrator on 2017/3/13.
  */
-@Repository
-public interface ShareMessageDao {
+public interface ShareMessageService {
     ShareMessage getMessageByUserName(String name);
 
     List<ShareMessage> getMessageAll();

@@ -13,7 +13,6 @@ public class JsonDto implements Serializable{
     private String message;
     private Object data;
 
-
     public JsonDto(boolean success){
         this(success,null,null);
     }
